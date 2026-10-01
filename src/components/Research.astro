@@ -1,0 +1,105 @@
+---
+const themes = [
+  'Computer vision for cosmetic skin analysis',
+  'Indian and diverse skin-data representation',
+  'Image quality and capture-condition robustness',
+  'Model benchmarking and evaluation',
+  'Dataset quality and provenance',
+  'Applied AI research',
+  'Human and expert-assisted validation',
+  'Responsible AI deployment',
+];
+---
+
+<section id="research" class="section-alt">
+  <div class="container research-grid">
+    <div class="research-copy">
+      <p class="eyebrow">Research &amp; Development</p>
+      <h2>Research is part of the product.</h2>
+      <p class="lede">Reliable AI requires more than model development.</p>
+      <p class="lede">
+        RupamLab's R&amp;D work focuses on data quality, model performance, real-world
+        robustness, evaluation and responsible deployment.
+      </p>
+
+      <ul class="themes">
+        {themes.map((theme) => (
+          <li>{theme}</li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="card callout">
+      <p class="eyebrow">Collaboration</p>
+      <h3>Research partnerships</h3>
+      <p>
+        We are interested in collaborating with universities, research institutions,
+        cosmetic-science organisations, beauty companies and other partners working on
+        applied AI and visual intelligence.
+      </p>
+      <a class="link-arrow" href="#contact">Discuss a research collaboration →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .research-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .lede {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  .themes {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0 0;
+    display: grid;
+    gap: 14px;
+  }
+
+  .themes li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 16px;
+    color: var(--text);
+  }
+
+  .themes li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background: var(--teal-400);
+  }
+
+  .callout {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .callout h3 {
+    font-size: 20px;
+  }
+
+  @media (max-width: 860px) {
+    .research-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .callout {
+      position: static;
+    }
+  }
+</style>

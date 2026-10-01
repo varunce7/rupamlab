@@ -1,0 +1,108 @@
+---
+const pillars = [
+  {
+    title: 'AI & Computer Vision',
+    body: 'Developing visual intelligence systems for analysing and understanding images.',
+  },
+  {
+    title: 'Data & Research',
+    body: 'Building structured datasets, evaluation systems and research pipelines required for reliable AI.',
+  },
+  {
+    title: 'Applied Products',
+    body: 'Turning R&D into APIs, software and commercial products that companies can integrate into real-world workflows.',
+  },
+];
+---
+
+<section id="company" class="section-dark">
+  <div class="container company-grid">
+    <div class="company-intro">
+      <p class="eyebrow on-dark">RupamLab</p>
+      <h2>Building applied AI for visual intelligence.</h2>
+      <p>
+        RupamLab Private Limited is an India-based artificial intelligence research and
+        technology company.
+      </p>
+      <p>
+        We develop AI, machine learning and computer vision software, APIs, data systems
+        and digital products with an initial focus on beauty, skincare and cosmetic
+        applications.
+      </p>
+      <p>
+        Our goal is to turn advances in computer vision and machine learning into
+        practical, reliable products that can operate under real-world conditions.
+      </p>
+    </div>
+
+    <ul class="pillars">
+      {pillars.map((pillar, i) => (
+        <li class="pillar">
+          <span class="pillar-index">{String(i + 1).padStart(2, '0')}</span>
+          <div>
+            <h3>{pillar.title}</h3>
+            <p>{pillar.body}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .company-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+
+  .company-intro p {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .company-intro h2 {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  .pillars {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pillar {
+    display: flex;
+    gap: 20px;
+    padding: 24px 0;
+    border-top: 1px solid var(--navy-border);
+  }
+
+  .pillar:last-child {
+    border-bottom: 1px solid var(--navy-border);
+  }
+
+  .pillar-index {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--teal-400);
+    flex-shrink: 0;
+  }
+
+  .pillar h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .pillar p {
+    font-size: 15px;
+  }
+
+  @media (max-width: 860px) {
+    .company-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+</style>

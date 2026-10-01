@@ -1,0 +1,103 @@
+---
+import { PRODUCT } from '../config/site';
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy fade-in">
+      <p class="eyebrow">RupamLab Private Limited</p>
+      <h1>AI research and technology for the future of beauty and skincare.</h1>
+      <p class="lede">
+        RupamLab develops artificial intelligence, machine learning and computer vision
+        technologies for beauty, skincare and related digital applications.
+      </p>
+      <p class="lede">
+        Our work focuses on building reliable visual intelligence systems, data
+        infrastructure and AI models designed for real-world use.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href={PRODUCT.url} target="_blank" rel="noopener">
+          Explore Rupam AI
+        </a>
+        <a class="link-arrow" href="#company">About RupamLab →</a>
+      </div>
+    </div>
+
+    <div class="hero-visual fade-in">
+      <img
+        src="/brand/rupam-skin-analysis-hero.jpg"
+        alt="Rupam AI analysing a facial image and reporting a hyperpigmentation index"
+        width="608"
+        height="576"
+        class="visual-image"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 72px 0 96px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero-copy h1 {
+    font-size: 58px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .lede {
+    font-size: 18px;
+    margin-top: 20px;
+    max-width: 560px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .visual-image {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 608 / 576;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+  }
+
+  @media (max-width: 960px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-copy h1 {
+      font-size: 40px;
+    }
+
+    .hero-visual {
+      margin-top: 16px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .hero-copy h1 {
+      font-size: 36px;
+    }
+  }
+</style>

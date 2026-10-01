@@ -1,0 +1,139 @@
+---
+import { PRODUCT } from '../config/site';
+
+const tags = ['Computer Vision', 'AI Analysis', 'API Integration', 'Structured Skin Insights'];
+---
+
+<section id="rupam-ai" class="section-alt">
+  <div class="container product-grid">
+    <div class="product-copy">
+      <p class="eyebrow">Flagship Product</p>
+      <h2>Rupam AI</h2>
+      <p class="lede">
+        Rupam AI is RupamLab's computer-vision technology for cosmetic skin analysis.
+      </p>
+      <p class="lede">
+        It enables beauty, skincare and digital commerce businesses to analyse facial
+        images and generate structured cosmetic skin insights through software and APIs.
+      </p>
+    </div>
+
+    <div class="card product-card">
+      <div class="product-image">
+        <img
+          src="/brand/rupam-skin-analysis-product.jpg"
+          alt="Rupam AI detecting pimples on a facial scan"
+          width="608"
+          height="576"
+        />
+      </div>
+
+      <div class="product-body">
+        <img src="/brand/rupam-logo.png" alt="Rupam AI" width="104" height="37" class="product-logo" />
+        <p class="product-subtitle">AI-powered cosmetic skin analysis</p>
+
+        <ul class="tags">
+          {tags.map((tag) => (
+            <li>{tag}</li>
+          ))}
+        </ul>
+
+        <a class="btn btn-primary" href={PRODUCT.url} target="_blank" rel="noopener">
+          Visit rupam.ai →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="disclaimer">
+      Rupam AI is currently positioned for cosmetic and beauty-tech applications and is
+      not intended to diagnose or treat medical conditions.
+    </p>
+  </div>
+</section>
+
+<style>
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .lede {
+    font-size: 18px;
+    margin-top: 16px;
+  }
+
+  .product-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-image {
+    width: 100%;
+    aspect-ratio: 608 / 440;
+    overflow: hidden;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-body {
+    padding: 28px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .product-logo {
+    height: 28px;
+    width: auto;
+  }
+
+  .product-subtitle {
+    font-size: 15px;
+    color: var(--text);
+    margin-top: -8px;
+  }
+
+  .tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tags li {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--teal-700);
+    background: var(--teal-50);
+    border: 1px solid var(--teal-100);
+    border-radius: 999px;
+    padding: 6px 14px;
+  }
+
+  .disclaimer {
+    margin-top: 48px;
+    font-size: 14px;
+    color: var(--text-soft);
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+  }
+
+  @media (max-width: 860px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

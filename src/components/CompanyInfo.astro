@@ -1,0 +1,108 @@
+---
+import { COMPANY_INFO, PRODUCT, SITE } from '../config/site';
+
+const rows = [
+  { label: 'Legal Name', value: COMPANY_INFO.legalName },
+  { label: 'Corporate Identity Number', value: COMPANY_INFO.cin },
+  { label: 'Company Type', value: COMPANY_INFO.companyType },
+  { label: 'Incorporation Date', value: COMPANY_INFO.incorporationDate },
+  { label: 'Country', value: COMPANY_INFO.country },
+];
+---
+
+<section id="company-information">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Legal</p>
+      <h2>Company Information</h2>
+    </div>
+
+    <div class="info-grid">
+      <dl class="info-table">
+        {rows.map((row) => (
+          <div class="info-row">
+            <dt>{row.label}</dt>
+            <dd>{row.value}</dd>
+          </div>
+        ))}
+        <div class="info-row">
+          <dt>Registered Office</dt>
+          <dd>
+            {COMPANY_INFO.registeredOffice.map((line) => (
+              <span class="address-line">{line}</span>
+            ))}
+          </dd>
+        </div>
+        <div class="info-row">
+          <dt>Official Website</dt>
+          <dd>{COMPANY_INFO.website}</dd>
+        </div>
+        <div class="info-row">
+          <dt>Flagship Product</dt>
+          <dd>
+            {PRODUCT.name} — <a href={PRODUCT.url} target="_blank" rel="noopener">{PRODUCT.url}</a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<style>
+  .info-grid {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .info-table {
+    margin: 0;
+  }
+
+  .info-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    padding: 20px 28px;
+  }
+
+  .info-row:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .info-row:nth-child(odd) {
+    background: var(--bg-alt);
+  }
+
+  dt {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink);
+  }
+
+  dd {
+    margin: 0;
+    font-size: 15px;
+    color: var(--text);
+  }
+
+  .address-line {
+    display: block;
+  }
+
+  dd a {
+    color: var(--teal-600);
+    text-decoration: none;
+  }
+
+  dd a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .info-row {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+  }
+</style>

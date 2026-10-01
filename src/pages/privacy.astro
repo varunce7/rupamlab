@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { CONTACT, SITE } from '../config/site';
+---
+
+<BaseLayout
+  path="/privacy"
+  title={`Privacy Policy | ${SITE.legalName}`}
+  description="How RupamLab Private Limited handles information collected through rupamlab.com."
+>
+  <section class="legal">
+    <div class="container legal-content">
+      <p class="eyebrow">Privacy</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: October 2026</p>
+
+      <p>
+        rupamlab.com is primarily an informational corporate website for RupamLab Private
+        Limited. This page explains, in plain terms, how we handle information in
+        connection with this site.
+      </p>
+
+      <h2>Information we may collect</h2>
+      <p>
+        Like most websites, rupamlab.com may collect basic server and analytics
+        information, such as IP address, browser type and pages visited, to help us
+        understand how the site is used and to keep it secure and reliable.
+      </p>
+
+      <h2>Information you provide to us</h2>
+      <p>
+        If you contact us, for example by emailing {CONTACT.email}, you voluntarily
+        provide us with information such as your name, email address and the contents of
+        your message.
+      </p>
+
+      <h2>How we use information</h2>
+      <p>
+        Information collected through this site is used only to respond to enquiries, to
+        maintain and improve the website, and for other legitimate business purposes of
+        RupamLab Private Limited. We do not sell personal information.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        If you have questions about this privacy policy or about how your information is
+        handled, please contact us at <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal {
+    padding: 64px 0 96px;
+  }
+
+  .legal-content {
+    max-width: 760px;
+  }
+
+  .legal-content h1 {
+    font-size: 42px;
+    margin-top: 0;
+  }
+
+  .updated {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--text-soft);
+  }
+
+  .legal-content h2 {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
+
+  .legal-content p {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  .legal-content a {
+    color: var(--teal-600);
+  }
+</style>
